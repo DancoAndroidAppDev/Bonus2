@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.danco.bonus2" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".h25b2danco.activity.TopLevelActivity"
+            android:label="@string/title_activity_top_level"
+            android:theme="@style/DrawerAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".h25b2danco.activity.ContactDetailActivity"
+            android:label="@string/title_activity_contact_detail"
+            android:parentActivityName=".h25b2danco.activity.TopLevelActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".h25b2danco.activity.TopLevelActivity" />
+        </activity>
+        <activity
+            android:name=".h25b2danco.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".h25b2danco.activity.TopLevelActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".h25b2danco.activity.TopLevelActivity" />
+        </activity>
+        <activity
+            android:name=".h25b2danco.activity.AddContactActivity"
+            android:label="@string/title_activity_add_contact"
+            android:parentActivityName=".h25b2danco.activity.TopLevelActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".h25b2danco.activity.TopLevelActivity" />
+        </activity>
+
+        <receiver android:name=".h25b2danco.widget.MyAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".h25b2danco.service.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS">
+        </service>
+    </application>
+
+</manifest>

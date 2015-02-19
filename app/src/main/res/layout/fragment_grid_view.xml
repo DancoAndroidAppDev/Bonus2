@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.example.danco.bonus2.h25b2danco.fragment.GridViewFragment">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="@dimen/grid_columnWidth"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/grid_view_horizontalSpacing"
+        android:numColumns="@integer/numColumns"
+        android:paddingEnd="@dimen/grid_view_horizontalSpacing"
+        android:paddingLeft="@dimen/grid_view_horizontalSpacing"
+        android:paddingRight="@dimen/grid_view_horizontalSpacing"
+        android:paddingStart="@dimen/grid_view_horizontalSpacing"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/grid_view_verticalSpacing"
+        tools:listitem="@layout/item_grid"/>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No items"
+        android:visibility="gone"/>
+</FrameLayout>

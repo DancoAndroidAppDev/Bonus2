@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Animate from its current position. However, note when animation completes
+     the view "jumps" back into place. This type of animation does not alter position -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="2000"
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:toXDelta="-50%"
+        android:toYDelta="-200%"/>
+</set>
